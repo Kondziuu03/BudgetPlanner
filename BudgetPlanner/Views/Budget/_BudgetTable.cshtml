@@ -1,0 +1,17 @@
+﻿@model BudgetPlanner.Core.Models.Domains.Budget
+
+<div id="budgetTable">
+    <table class="table table-hover" align="left">
+        <thead>
+            <tr>
+                <th scope="col">Nazwa</th>
+                <th scope="col">Wartość</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>@Model.Name</td>
+                <td id="budgetValue">@Model.BudgetValue zł</td>
+            </tr>
+    </table>
+</div>

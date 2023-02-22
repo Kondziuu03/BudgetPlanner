@@ -1,0 +1,41 @@
+﻿@model IEnumerable<BudgetPlanner.Core.Models.Domains.Task>
+
+<div id="tasksTable">
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Nazwa</th>
+                <th scope="col">Cena całkowita</th>
+                <th scope="col">Ilość</th>
+                <th scope="col">Cena za sztukę</th>
+                <th scope="col">Zrealizuj</th>
+                <th scope="col">Usuń</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (Model != null && Model.Any())
+            {
+                @foreach (var task in Model)
+                {
+                    <tr>
+                        <th scope="row">
+                            <a href="@Url.Action("Task","Task", new { id = task.Id})" class="font-weight-bold">
+                                @task.Name
+                            </a>
+                        </th>
+                        <td>@task.TotalValue zł</td>
+                        <td>@task.Quantity</td>
+                        <td>@task.Value zł</td>                     
+                        <td>
+                            @if (!task.isExecuted)
+                            {
+                                <button class="btn btn-primary" onclick="finishTask('@task.Id',this)">Zrealizuj</button>
+                            }
+                        </td>           
+                        <td><button class="btn btn-primary btn-danger" onclick="deleteTask('@task.Id',this)">Usuń</button></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

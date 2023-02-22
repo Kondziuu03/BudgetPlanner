@@ -1,0 +1,28 @@
+﻿@model BudgetPlanner.Core.Models.Domains.Budget
+
+
+<h2 class="text-center">Ustaw swój budżet!</h2>
+
+<div class="row">
+    <div class="col-lg-3 mt-4"></div>
+    <div class="col-lg-6 mt-4 text-center">
+        @using (Html.BeginForm("Budget", "Budget"))
+        {
+            @Html.AntiForgeryToken();
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.Name)
+                @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "--brak--" })
+                @Html.ValidationMessageFor(x => x.Name)
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(x => x.BudgetValue)
+                @Html.TextBoxFor(x => x.BudgetValue, new { @class = "form-control", placeholder = "0.00 zł" })
+                @Html.ValidationMessageFor(x => x.BudgetValue)
+            </div>
+
+            <button class="btn btn-primary btn-lg align-content-center mb-5 mt-4" type="submit">Zapisz</button>
+        }
+    </div>
+</div>

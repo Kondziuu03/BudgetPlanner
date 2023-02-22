@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31911.196
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BudgetPlanner", "BudgetPlanner\BudgetPlanner.csproj", "{7B93280E-5EE1-452B-9009-3CB9123A0271}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B93280E-5EE1-452B-9009-3CB9123A0271}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B93280E-5EE1-452B-9009-3CB9123A0271}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B93280E-5EE1-452B-9009-3CB9123A0271}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B93280E-5EE1-452B-9009-3CB9123A0271}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {BAC75404-3ADF-4574-9FA6-645B7DEF827A}
+	EndGlobalSection
+EndGlobal
